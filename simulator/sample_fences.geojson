@@ -1,0 +1,10 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"id": "fence-1", "name": "Test Paddock"},
+      "geometry": {"type": "Polygon", "coordinates": [[[20.0,45.0],[20.001,45.0],[20.001,45.001],[20.0,45.001],[20.0,45.0]]]}
+    }
+  ]
+}

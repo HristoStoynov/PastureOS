@@ -1,0 +1,15 @@
+// cue and pulse safety logic pseudocode
+function trigger_audio_warning():
+  play_audio(duration=2s)
+  record_warning_timestamp()
+
+function can_pulse():
+  if manual_override(): return False
+  if low_battery(): return False
+  if time_since_last_pulse() < config.pulse_cooldown: return False
+  return True
+
+function trigger_pulse():
+  if not can_pulse(): return
+  apply_pulse(duration=config.pulse_duration, intensity=config.pulse_intensity)
+  record_pulse_timestamp()

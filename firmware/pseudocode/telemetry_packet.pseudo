@@ -1,0 +1,14 @@
+// telemetry packet structure
+{
+  "animal_id": "animal-001",
+  "collar_id": "collar-abc",
+  "timestamp": "2026-06-01T12:00:00Z",
+  "latitude": 45.0001,
+  "longitude": 20.0001,
+  "gps_accuracy": 4.2,
+  "battery_level": 78.5,
+  "connectivity_status": "LTE",
+  "activity_level": 0.3,
+  "temperature_trend": 0.1,
+  "firmware_version": "0.1.0",
+}

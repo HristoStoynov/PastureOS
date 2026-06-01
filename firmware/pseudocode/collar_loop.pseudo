@@ -1,0 +1,25 @@
+// collar main loop pseudocode
+init_sensors()
+load_config()
+while true:
+  if manual_override_active():
+    set_state(MANUAL_OVERRIDE)
+    sleep_short()
+    continue
+
+  read_gnss()
+  read_imu()
+  read_battery()
+
+  if low_battery():
+    set_state(LOW_BATTERY)
+    send_heartbeat()
+    sleep_long()
+    continue
+
+  publish_telemetry_periodically()
+
+  if state != TRAINING_MODE:
+    check_geofence_and_handle()
+
+  sleep(adaptive_interval())

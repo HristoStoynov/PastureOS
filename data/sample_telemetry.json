@@ -1,0 +1,10 @@
+[
+  {
+    "animal_id": "cow-1",
+    "collar_id": "collar-001",
+    "timestamp": "2026-06-01T12:00:00Z",
+    "latitude": 45.0002,
+    "longitude": 20.0002,
+    "battery_level": 82
+  }
+]

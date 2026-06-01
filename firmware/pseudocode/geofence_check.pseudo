@@ -1,0 +1,16 @@
+// geofence check pseudocode
+function check_geofence_and_handle():
+  loc = current_gnss()
+  for fence in get_active_fences():
+    if point_in_polygon(loc, fence.polygon):
+      set_state(TRACKING)
+      distance = distance_to_boundary(loc, fence.polygon)
+      if distance <= fence.warning_radius and not warned_recently():
+        trigger_audio_warning()
+        set_state(AUDIO_WARNING)
+      if distance <= fence.breach_radius and audio_warning_played_recently() and can_pulse():
+        trigger_pulse()
+        set_state(PULSE_TRIGGERED)
+    else:
+      set_state(BREACH_ALERT)
+      send_escape_alert()

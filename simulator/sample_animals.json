@@ -1,0 +1,4 @@
+[
+  {"animal_id": "cow-1", "collar_id": "collar-001", "lat": 45.0002, "lon": 20.0002},
+  {"animal_id": "cow-2", "collar_id": "collar-002", "lat": 45.0005, "lon": 20.0005}
+]
