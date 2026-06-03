@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PastureOS-components")(type "KiCad")(uri "${KIPRJMOD}/PastureOS-components.kicad_sym")(options "")(descr ""))
+)
